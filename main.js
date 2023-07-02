@@ -1,6 +1,6 @@
-var playerY, ctx, enemyY, playerPoints = 0, enemyPoints = 0, playerKey, enemyKey, difficulty
+var playerY, ctx, enemyY, playerPoints = 0, enemyPoints = 0, playerKey, enemyKey, ballVelocity, maxPoints
 var ballY, ballX, ballXOrientation, ballYOrientation
-const height=500, width=800, paddleWidth=20, paddleHeight=200, playerX = 10, enemyX = width - paddleWidth - 10
+const height=800, width=1200, paddleWidth=20, paddleHeight=200, playerX = 10, enemyX = width - paddleWidth - 10
 
 function control(){
     document.addEventListener(`keydown`,function(ev){
@@ -14,6 +14,15 @@ function control(){
         }
     })
 }
+
+// function players(){
+//     if(document.getElementById(`1player`).checked){
+
+//     }
+//     else if(document.getElementById(`2player`).checked){
+        
+//     }
+// }
 
 function ball(){
     ballYOrientation = ballXOrientation = Math.pow(2, Math.floor(Math.random()*2)+1)-3
@@ -40,6 +49,11 @@ function points(){
     ctx.fillStyle = `#fff`
     ctx.fillText(playerPoints, width/4, 50)
     ctx.fillText(enemyPoints, 3*(width/4), 50)
+    // maxPoints = document.getElementById(`maxPoints`).values
+    // console.log(maxPoints)
+    // if(maxPoints == null || maxPoints == 0){
+    //     maxPoints == 10
+    // }
 }
 
 function endGame(){
@@ -103,12 +117,7 @@ function loop(){
     }
 
     var enemyMiddle = enemyY + paddleHeight/2
-    // if(enemyMiddle > ballY && enemyY > 0){
-    //     enemyY -= 10
-    // }
-    // else if(enemyMiddle << ballY && enemyY + paddleHeight < height){
-    //     enemyY += 10
-    // }
+ 
     if (enemyMiddle < ballY && enemyY + paddleHeight < height) {
         enemyY += 4
       } else if (enemyMiddle > ballY && enemyY > 0) {

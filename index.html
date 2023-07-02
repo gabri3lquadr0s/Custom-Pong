@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Pong</title>
+    <title>Custom Pong</title>
 </head>
 <body>
-    <h1>Welcome to Pong!</h1>
+    <h1>Welcome to Custom Pong!</h1>
     <h2>Choose one of this options to play!</h2><hr>
-    <a href="pong.html"><button id="1player">1 player!</button></a>
-    <a href="pong.html"><button id="2player">2 player!</button></a>
+    <input type="radio" id="1player" name="a" value="1player">
+    <label for="1player">1 Player</label><br>
+    <input type="radio" id="2player" name="a" value="2player">
+    <label for="2player">2 Players</label><br><br>
+    <a href="pong.html"><button id="play">Play!</button></a><br><br><hr>
+    <input type="number" id="maxPoints">
+    <label fot="maxPoints">Max Points(not implemeted yet)</label><br><br>
+    <input type="file" id="background" name="background" accept="image/*">
+    <label for="background">Background image(not implemented yet)</label><br>
+    <input type="file" id="playerImg" name="playerImg" accept="image/*">
+    <label for="playerImg">Player 1 image(not implemented yet)</label><br>
+    <input type="file" id="enemyImg" name="enemyImg" accept="image/*">
+    <label for="enemyImg">Player 2 image(not implemented yet)</label><br>
+    <input type="file" id="ballImg" name="ballImg" accept="image/*">
+    <label for="ballImg">Ball image(not implemented yet)</label><br>
 </body>
 </html>
